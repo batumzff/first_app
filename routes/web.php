@@ -15,6 +15,10 @@ Route::get('/coders', function (){
     return view('coders.index',["greeting"=> "hello", "coders" => $coders]);
 });
 
+Route::get('/coders/create', function () {
+    return view('coders.create');
+});
+
 Route::get('/coders/{id}', function ($id){
     //fetch record with id
     return view('coders.show',["id"=>$id]);
